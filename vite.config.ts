@@ -9,8 +9,6 @@ export default defineConfig((config) => {
   return {
     build: {
       target: 'esnext',
-      // Set base for GitHub Pages
-      base: '/capx/',  // Replace with your repo name
     },
     plugins: [
       nodePolyfills({

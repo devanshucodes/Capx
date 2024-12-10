@@ -10,46 +10,7 @@ export const DEFAULT_MODEL = 'claude-3-5-sonnet-latest';
 export const PROMPT_COOKIE_KEY = 'cachedPrompt';
 
 const PROVIDER_LIST: ProviderInfo[] = [
-  {
-    name: 'Anthropic',
-    staticModels: [
-      {
-        name: 'claude-3-5-sonnet-latest',
-        label: 'Claude 3.5 Sonnet (new)',
-        provider: 'Anthropic',
-        maxTokenAllowed: 8000,
-      },
-      {
-        name: 'claude-3-5-sonnet-20240620',
-        label: 'Claude 3.5 Sonnet (old)',
-        provider: 'Anthropic',
-        maxTokenAllowed: 8000,
-      },
-      {
-        name: 'claude-3-5-haiku-latest',
-        label: 'Claude 3.5 Haiku (new)',
-        provider: 'Anthropic',
-        maxTokenAllowed: 8000,
-      },
-      { name: 'claude-3-opus-latest', label: 'Claude 3 Opus', provider: 'Anthropic', maxTokenAllowed: 8000 },
-      { name: 'claude-3-sonnet-20240229', label: 'Claude 3 Sonnet', provider: 'Anthropic', maxTokenAllowed: 8000 },
-      { name: 'claude-3-haiku-20240307', label: 'Claude 3 Haiku', provider: 'Anthropic', maxTokenAllowed: 8000 },
-    ],
-    getApiKeyLink: 'https://console.anthropic.com/settings/keys',
-  },
-  {
-    name: 'Ollama',
-    staticModels: [],
-    getDynamicModels: getOllamaModels,
-    getApiKeyLink: 'https://ollama.com/download',
-    labelForGetApiKey: 'Download Ollama',
-    icon: 'i-ph:cloud-arrow-down',
-  },
-  {
-    name: 'OpenAILike',
-    staticModels: [],
-    getDynamicModels: getOpenAILikeModels,
-  },
+  
   {
     name: 'Cohere',
     staticModels: [
@@ -214,29 +175,13 @@ const PROVIDER_LIST: ProviderInfo[] = [
     getApiKeyLink: 'https://huggingface.co/settings/tokens',
   },
 
-  {
-    name: 'OpenAI',
-    staticModels: [
-      { name: 'gpt-4o-mini', label: 'GPT-4o Mini', provider: 'OpenAI', maxTokenAllowed: 8000 },
-      { name: 'gpt-4-turbo', label: 'GPT-4 Turbo', provider: 'OpenAI', maxTokenAllowed: 8000 },
-      { name: 'gpt-4', label: 'GPT-4', provider: 'OpenAI', maxTokenAllowed: 8000 },
-      { name: 'gpt-3.5-turbo', label: 'GPT-3.5 Turbo', provider: 'OpenAI', maxTokenAllowed: 8000 },
-    ],
-    getApiKeyLink: 'https://platform.openai.com/api-keys',
-  },
+  
   {
     name: 'xAI',
     staticModels: [{ name: 'grok-beta', label: 'xAI Grok Beta', provider: 'xAI', maxTokenAllowed: 8000 }],
     getApiKeyLink: 'https://docs.x.ai/docs/quickstart#creating-an-api-key',
   },
-  {
-    name: 'Deepseek',
-    staticModels: [
-      { name: 'deepseek-coder', label: 'Deepseek-Coder', provider: 'Deepseek', maxTokenAllowed: 8000 },
-      { name: 'deepseek-chat', label: 'Deepseek-Chat', provider: 'Deepseek', maxTokenAllowed: 8000 },
-    ],
-    getApiKeyLink: 'https://platform.deepseek.com/apiKeys',
-  },
+
   {
     name: 'Mistral',
     staticModels: [
@@ -252,39 +197,8 @@ const PROVIDER_LIST: ProviderInfo[] = [
     ],
     getApiKeyLink: 'https://console.mistral.ai/api-keys/',
   },
-  {
-    name: 'LMStudio',
-    staticModels: [],
-    getDynamicModels: getLMStudioModels,
-    getApiKeyLink: 'https://lmstudio.ai/',
-    labelForGetApiKey: 'Get LMStudio',
-    icon: 'i-ph:cloud-arrow-down',
-  },
-  {
-    name: 'Together',
-    staticModels: [
-      {
-        name: 'Qwen/Qwen2.5-Coder-32B-Instruct',
-        label: 'Qwen/Qwen2.5-Coder-32B-Instruct',
-        provider: 'Together',
-        maxTokenAllowed: 8000,
-      },
-      {
-        name: 'meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo',
-        label: 'meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo',
-        provider: 'Together',
-        maxTokenAllowed: 8000,
-      },
 
-      {
-        name: 'mistralai/Mixtral-8x7B-Instruct-v0.1',
-        label: 'Mixtral 8x7B Instruct',
-        provider: 'Together',
-        maxTokenAllowed: 8192,
-      },
-    ],
-    getApiKeyLink: 'https://api.together.xyz/settings/api-keys',
-  },
+
 ];
 
 export const DEFAULT_PROVIDER = PROVIDER_LIST[0];
