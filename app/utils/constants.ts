@@ -10,7 +10,33 @@ export const DEFAULT_MODEL = 'claude-3-5-sonnet-latest';
 export const PROMPT_COOKIE_KEY = 'cachedPrompt';
 
 const PROVIDER_LIST: ProviderInfo[] = [
-  
+  {
+    name: 'Anthropic',
+    staticModels: [
+      {
+        name: 'claude-3-5-sonnet-latest',
+        label: 'Claude 3.5 Sonnet (new)',
+        provider: 'Anthropic',
+        maxTokenAllowed: 8000,
+      },
+      {
+        name: 'claude-3-5-sonnet-20240620',
+        label: 'Claude 3.5 Sonnet (old)',
+        provider: 'Anthropic',
+        maxTokenAllowed: 8000,
+      },
+      {
+        name: 'claude-3-5-haiku-latest',
+        label: 'Claude 3.5 Haiku (new)',
+        provider: 'Anthropic',
+        maxTokenAllowed: 8000,
+      },
+      { name: 'claude-3-opus-latest', label: 'Claude 3 Opus', provider: 'Anthropic', maxTokenAllowed: 8000 },
+      { name: 'claude-3-sonnet-20240229', label: 'Claude 3 Sonnet', provider: 'Anthropic', maxTokenAllowed: 8000 },
+      { name: 'claude-3-haiku-20240307', label: 'Claude 3 Haiku', provider: 'Anthropic', maxTokenAllowed: 8000 },
+    ],
+    getApiKeyLink: 'https://console.anthropic.com/settings/keys',
+  },
   {
     name: 'Cohere',
     staticModels: [
@@ -175,7 +201,6 @@ const PROVIDER_LIST: ProviderInfo[] = [
     getApiKeyLink: 'https://huggingface.co/settings/tokens',
   },
 
-  
   {
     name: 'xAI',
     staticModels: [{ name: 'grok-beta', label: 'xAI Grok Beta', provider: 'xAI', maxTokenAllowed: 8000 }],
@@ -197,8 +222,6 @@ const PROVIDER_LIST: ProviderInfo[] = [
     ],
     getApiKeyLink: 'https://console.mistral.ai/api-keys/',
   },
-
-
 ];
 
 export const DEFAULT_PROVIDER = PROVIDER_LIST[0];

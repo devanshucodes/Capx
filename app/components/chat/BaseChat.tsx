@@ -274,10 +274,11 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
             {!chatStarted && (
               <div id="intro" className="mt-[26vh] max-w-chat mx-auto text-center px-4 lg:px-0">
                 <h1 className="text-3xl lg:text-6xl font-bold text-bolt-elements-textPrimary mb-4 animate-fade-in">
-                Where Ideas Ignite
+                  Where Ideas Ignite
                 </h1>
                 <p className="text-md lg:text-xl mb-8 text-bolt-elements-textSecondary animate-fade-in animation-delay-200">
-                Bring your ideas to life in seconds or enhance your existing projects effortlessly — all with the power of Capx AI
+                  Bring your ideas to life in seconds or enhance your existing projects effortlessly — all with the
+                  power of Capx AI
                 </p>
               </div>
             )}
@@ -307,28 +308,28 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
                 )}
               >
                 <svg className={classNames(styles.PromptEffectContainer)}>
-                <defs>
-  <linearGradient
-    id="line-gradient"
-    x1="20%"
-    y1="0%"
-    x2="-14%"
-    y2="10%"
-    gradientUnits="userSpaceOnUse"
-    gradientTransform="rotate(-45)"
-  >
-    <stop offset="0%" stopColor="#39ff14" stopOpacity="0%"></stop>
-    <stop offset="40%" stopColor="#39ff14" stopOpacity="80%"></stop>
-    <stop offset="50%" stopColor="#39ff14" stopOpacity="80%"></stop>
-    <stop offset="100%" stopColor="#39ff14" stopOpacity="0%"></stop>
-  </linearGradient>
-  <linearGradient id="shine-gradient">
-    <stop offset="0%" stopColor="white" stopOpacity="0%"></stop>
-    <stop offset="40%" stopColor="#8adaff" stopOpacity="80%"></stop>
-    <stop offset="50%" stopColor="#8adaff" stopOpacity="80%"></stop>
-    <stop offset="100%" stopColor="white" stopOpacity="0%"></stop>
-  </linearGradient>
-</defs>
+                  <defs>
+                    <linearGradient
+                      id="line-gradient"
+                      x1="20%"
+                      y1="0%"
+                      x2="-14%"
+                      y2="10%"
+                      gradientUnits="userSpaceOnUse"
+                      gradientTransform="rotate(-45)"
+                    >
+                      <stop offset="0%" stopColor="#39ff14" stopOpacity="0%"></stop>
+                      <stop offset="40%" stopColor="#39ff14" stopOpacity="80%"></stop>
+                      <stop offset="50%" stopColor="#39ff14" stopOpacity="80%"></stop>
+                      <stop offset="100%" stopColor="#39ff14" stopOpacity="0%"></stop>
+                    </linearGradient>
+                    <linearGradient id="shine-gradient">
+                      <stop offset="0%" stopColor="white" stopOpacity="0%"></stop>
+                      <stop offset="40%" stopColor="#8adaff" stopOpacity="80%"></stop>
+                      <stop offset="50%" stopColor="#8adaff" stopOpacity="80%"></stop>
+                      <stop offset="100%" stopColor="white" stopOpacity="0%"></stop>
+                    </linearGradient>
+                  </defs>
 
                   <rect className={classNames(styles.PromptEffectLine)} pathLength="100" strokeLinecap="round"></rect>
                   <rect className={classNames(styles.PromptShine)} x="48" y="24" width="70" height="1"></rect>
