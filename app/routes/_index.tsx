@@ -6,11 +6,11 @@ import { Header } from '~/components/header/Header';
 
 export const meta: MetaFunction = () => {
   return [
-    { title: 'Capx' },
+    { title: 'Build & Deploy AI Agents on Capx' },
     {
       name: 'description',
       content:
-        'Bring your ideas to life in seconds or enhance your existing projects effortlessly — all with the power of Capx AI',
+        'Ship anything from a conversational AI agent to a fully functional AI agent app — all with the power of Capx A',
     },
   ];
 };
